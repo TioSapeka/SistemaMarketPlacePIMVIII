@@ -3,9 +3,10 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace SistemaMarketPlacePIMVIII.Models
 {
-    public class VendedorModel
+    public class Vendedor
     {
         [Key]
+        [Column(Order = 1)]
         public int ID { get; set; }
         public string Razao_Social { get; set; }
         public string Nome_Fantasia { get; set; }
@@ -13,6 +14,6 @@ namespace SistemaMarketPlacePIMVIII.Models
         public string Senha { get; set; }
         public string CNPJ { get; set; }
         public int Comissao { get; set; }
-        public int Endereco_ID { get; set; }
+        public Endereco Endereco_ID { get; set; }
     }
 }
