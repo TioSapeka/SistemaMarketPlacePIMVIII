@@ -20,4 +20,13 @@ namespace SistemaMarketPlacePIMVIII.Models
         public Categoria Categoria { get; set; }
 
     }
+
+    public class Categoria
+    {
+        [Key]
+        [Column(Order = 1)]
+        public int ID { get; set; }
+        public string Nome { get; set; }
+        public string Descricao { get; set; }
+    }
 }
