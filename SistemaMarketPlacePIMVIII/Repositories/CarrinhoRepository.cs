@@ -34,5 +34,12 @@ namespace SistemaMarketPlacePIMVIII.Repositories
         {
             return _bancoContext.Carrinho.FirstOrDefault(x => x.ID == id);
         }
+
+        public bool excluir(int id)
+        {
+            _bancoContext.Carrinho.Remove(Carrinho);
+            _bancoContext.SaveChanges();
+            return true;
+        }
     }
 }

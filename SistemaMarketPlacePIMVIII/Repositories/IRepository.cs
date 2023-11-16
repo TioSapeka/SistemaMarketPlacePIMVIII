@@ -7,6 +7,7 @@ namespace SistemaMarketPlacePIMVIII.Repositories
         Carrinho ObterPorId(int id);
         List<Carrinho> ObterTodos();
         CarrinhoRepository Adicionar(CarrinhoRepository carrinho);
+        bool excluir(int id);
 void Adicionar(Carrinho carrinho);
     }
 }

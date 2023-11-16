@@ -14,6 +14,7 @@ namespace SistemaMarketPlacePIMVIII.Controllers
             _CarrinhoRepository = CarrinhoRepository;
         }
         private readonly ILogger<CarrinhoController> _logger;
+        private int id;
 
         public CarrinhoController(ILogger<CarrinhoController> logger)
         {
@@ -31,15 +32,24 @@ namespace SistemaMarketPlacePIMVIII.Controllers
             return View();
         }
         [HttpPost]
-        public IActionResult Criar(Carrinho carrinho) 
+        public IActionResult Adicionar(Carrinho carrinho) 
         {
             _CarrinhoRepository.Adicionar(carrinho);
             return RedirectToAction("Index");
         }
         public IActionResult Atualizar(Carrinho carrinho) 
         {
+           Carrinho Carrinho = _CarrinhoRepository.ObterPorId(id);
             return View();
         }
     }
-    
-}
+    public IActionResult excluir(int id)
+    {
+        _CarrinhoRepository.excluir(id);
+
+        return RedirectToActionResult("Index");
+
+    }
+
+
+    }
