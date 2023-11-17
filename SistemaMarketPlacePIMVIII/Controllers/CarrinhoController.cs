@@ -35,6 +35,7 @@ namespace SistemaMarketPlacePIMVIII.Controllers
         public IActionResult Adicionar(Carrinho carrinho) 
         {
             _CarrinhoRepository.Adicionar(carrinho);
+            TempData["MensagemSucesso"] = "Produto adicionado com sucesso";
             return RedirectToAction("Index");
         }
         public IActionResult Atualizar(Carrinho carrinho) 
