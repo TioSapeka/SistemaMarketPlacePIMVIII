@@ -15,22 +15,17 @@ namespace SistemaMarketPlacePIMVIII.Repositories
         {
             return _bancoContext.Carrinho.ToList();
         }
-        public CarrinhoRepository Adicionar(CarrinhoRepository carrinho)
+        public CarrinhoRepository Adicionar(Produto produtoNovo)
         {
-            _bancoContext.Carrinho.Add(carrinho);
+            _bancoContext.Carrinho.Add(produtoNovo);
             _bancoContext.SaveChanges();
 
 
-            return carrinho;
+            return produtoNovo;
 
         }
 
-        public void Adicionar(Carrinho carrinho)
-        {
-           
-        }
-
-        public Carrinho ObterPorId(int id)
+             public Carrinho ObterPorId(int id)
         {
             return _bancoContext.Carrinho.FirstOrDefault(x => x.ID == id);
         }
