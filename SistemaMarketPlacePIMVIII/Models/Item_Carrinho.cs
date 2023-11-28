@@ -6,13 +6,12 @@ namespace SistemaMarketPlacePIMVIII.Models
 {
     public class Item_Carrinho
     {
-        public Carrinho Carrinho { get; set; }
+        [Key]
         public int Carrinho_ID { get; set; }
-        public Produto Produto { get; set; }
+        public Carrinho Carrinho { get; set; }
         public int Produto_ID { get; set; }
+        public Produto Produto { get; set; }
         public string Quantidade { get; set; }
         public decimal Total { get; set; }
     }
-
-        // Propriedades de navegação
 }

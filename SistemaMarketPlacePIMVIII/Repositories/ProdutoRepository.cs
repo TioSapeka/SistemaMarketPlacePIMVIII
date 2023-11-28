@@ -3,9 +3,9 @@ using SistemaMarketPlacePIMVIII.Models;
 
 namespace SistemaMarketPlacePIMVIII.Repositories
 {
-    public class ClienteRepository : BaseRepository<Cliente>
+    public class ProdutoRepository : BaseRepository<Produto>
     {
-        public ClienteRepository(BancoContext bancoContext) : base(bancoContext)
+        public ProdutoRepository(BancoContext bancoContext) : base(bancoContext)
         {
         }
     }

@@ -13,8 +13,6 @@ namespace SistemaMarketPlacePIMVIII.Models
         public string Email { get; set; }
         public string Senha { get; set; }
         public int Endereco_ID { get; set; }
-
-        // Relacionamento com Endereco
         public Vendedor Endereco { get; set; }
     }
 }
