@@ -2,12 +2,12 @@
 
 namespace SistemaMarketPlacePIMVIII.Repositories
 {
-    public interface IRepository
+    public interface IRepository<T> where T : class
     {
-        Carrinho ObterPorId(int id);
-        List<Carrinho> ObterTodos();
-        CarrinhoRepository Adicionar(CarrinhoRepository carrinho);
-        bool excluir(int id);
-void Adicionar(Carrinho carrinho);
+        T ObterPorId(int id);
+        List<T> ObterTodos();
+        void Adicionar(T entidade);
+        void Excluir(T entidade);
+        void Atualizar(T entidade);
     }
 }

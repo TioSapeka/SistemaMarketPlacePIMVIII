@@ -14,13 +14,10 @@ namespace SistemaMarketPlacePIMVIII.Models
         public bool Status { get; set; }
         public int Vendedor_ID { get; set; }
         public int Categoria_ID { get; set; }
-
-        // Relacionamentos com Vendedor e Categoria
         public Vendedor Vendedor { get; set; }
         public Categoria Categoria { get; set; }
 
     }
-
     public class Categoria
     {
         [Key]

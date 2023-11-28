@@ -14,6 +14,4 @@ namespace SistemaMarketPlacePIMVIII.Models
         public string Quantidade { get; set; }
         public decimal Total { get; set; }
     }
-
-        // Propriedades de navegação
 }
